@@ -35,7 +35,7 @@ inner  class OnBoardingViewHolder(private val binding:ItemOnBoardingBinding):Vie
 ) {
     fun bind(onBoard: onBoard) {
 
-            binding.btnSkip.isVisible =adapterPosition==2
+            binding.btnStart.isVisible =adapterPosition==2
             binding.btnSkip.isVisible = adapterPosition!=2
 binding.btnSkip.setOnClickListener{
     onStart()
