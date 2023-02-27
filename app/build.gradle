@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -38,6 +39,8 @@ android {
 
 dependencies {
 
+
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -59,7 +62,20 @@ dependencies {
 
     //Circle indicator
     implementation 'me.relex:circleindicator:2.1.6'
+
+
+    def room_version = "2.5.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version"
 }
+
+
+
+
 
 
 

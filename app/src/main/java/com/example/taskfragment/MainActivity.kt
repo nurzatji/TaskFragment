@@ -44,7 +44,9 @@ class MainActivity : AppCompatActivity() {
             )
         )
         val bottonNavFragment = arrayListOf(
-            R.id.navigation_home, R.id.taskFragment, R.id.profileFragment, R.id.navigation_dashboard
+            R.id.navigation_home,
+            R.id.taskFragment, R.id.profileFragment,
+            R.id.navigation_dashboard
 
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
