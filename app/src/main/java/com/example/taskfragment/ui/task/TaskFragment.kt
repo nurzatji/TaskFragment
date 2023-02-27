@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.taskfragment.App
 import com.example.taskfragment.databinding.FragmentTaskBinding
-import com.example.taskfragment.ui.Model.Task
+import com.example.taskfragment.model.Task
 
 class TaskFragment : Fragment() {
     private lateinit var binding: FragmentTaskBinding

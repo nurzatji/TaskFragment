@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.taskfragment.App
 import com.example.taskfragment.R
 import com.example.taskfragment.databinding.FragmentHomeBinding
-import com.example.taskfragment.ui.Model.Task
+import com.example.taskfragment.model.Task
 import com.example.taskfragment.ui.home.adapter.TaskAdapter
 
 class HomeFragment : Fragment() {

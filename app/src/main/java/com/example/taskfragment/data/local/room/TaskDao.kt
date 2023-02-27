@@ -1,7 +1,7 @@
 package com.example.taskfragment.data.local.room
 
 import androidx.room.*
-import com.example.taskfragment.ui.Model.Task
+import com.example.taskfragment.model.Task
 
 @Dao
 interface TaskDao {
@@ -14,7 +14,7 @@ interface TaskDao {
 
 
     @Delete
-    fun  delete(task:Task )
+    fun  delete(task: Task)
 
 
     @Update

@@ -2,12 +2,10 @@ package com.example.taskfragment.ui.onBoarding.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.taskfragment.databinding.FragmentOnBoardBinding
 import com.example.taskfragment.databinding.ItemOnBoardingBinding
-import com.example.taskfragment.ui.Model.onBoard
+import com.example.taskfragment.data.local.model.onBoard
 import com.example.taskfragment.ui.utils.loadImage
 
 class onBoardingAdapter(private val onStart: () -> Unit) :

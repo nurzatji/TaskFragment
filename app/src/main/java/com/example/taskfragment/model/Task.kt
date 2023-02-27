@@ -1,4 +1,4 @@
-package com.example.taskfragment.ui.Model
+package com.example.taskfragment.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Task(
     @PrimaryKey(autoGenerate = true)
-    var id: String? = null,
+    var id: Int? = null,
     val title: String? = null,
     val description:String? =null
 

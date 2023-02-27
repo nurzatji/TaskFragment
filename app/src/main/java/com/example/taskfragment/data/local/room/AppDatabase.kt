@@ -2,7 +2,7 @@ package com.example.taskfragment.data.local.room
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.taskfragment.ui.Model.Task
+import com.example.taskfragment.model.Task
 
 
     @Database(entities = [Task::class], version = 1)

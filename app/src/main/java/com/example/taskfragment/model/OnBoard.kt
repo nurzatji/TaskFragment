@@ -1,6 +1,4 @@
-package com.example.taskfragment.ui.Model
-
-import android.media.Image
+package com.example.taskfragment.data.local.model
 
 data class onBoard(
     val title:String? = null,

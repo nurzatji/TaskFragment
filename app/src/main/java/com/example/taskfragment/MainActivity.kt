@@ -10,7 +10,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.taskfragment.data.local.Pref
 import com.example.taskfragment.databinding.ActivityMainBinding
-import com.example.taskfragment.ui.Profile.ProfileFragment
 import com.example.taskfragment.ui.home.HomeFragmentDirections
 
 class MainActivity : AppCompatActivity() {

@@ -42,7 +42,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.taskfragment.ui.Profile.ProfileFragment"
+        android:name="com.example.taskfragment.ui.profile.ProfileFragment"
         android:label="@string/hello_blank_fragment"
         tools:layout="@layout/fragment_profile"/>
     <fragment

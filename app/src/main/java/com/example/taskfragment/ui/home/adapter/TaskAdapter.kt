@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.taskfragment.databinding.ItemTaskBinding
-import com.example.taskfragment.ui.Model.Task
+import com.example.taskfragment.model.Task
 
 class TaskAdapter(private val onLongClick:(Task) ->Unit) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
