@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.taskfragment.databinding.ItemOnBoardingBinding
-import com.example.taskfragment.data.local.model.onBoard
+import com.example.taskfragment.model.onBoard
 import com.example.taskfragment.ui.utils.loadImage
 
 class onBoardingAdapter(private val onStart: () -> Unit) :

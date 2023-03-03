@@ -1,10 +1,12 @@
 package com.example.taskfragment.ui.home
 
+
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.taskfragment.App
@@ -12,6 +14,7 @@ import com.example.taskfragment.R
 import com.example.taskfragment.databinding.FragmentHomeBinding
 import com.example.taskfragment.model.Task
 import com.example.taskfragment.ui.home.adapter.TaskAdapter
+import com.example.taskfragment.ui.onBoarding.Adapter.onBoardingAdapter
 
 class HomeFragment : Fragment() {
 
@@ -21,7 +24,8 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        adapter = TaskAdapter(this::onLongClickListener)
+
+        adapter = TaskAdapter(this::onLongClick)
     }
 
     override fun onCreateView(
@@ -37,34 +41,35 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.fab.setOnClickListener {
             findNavController().navigate(R.id.taskFragment)
-
         }
         setData()
-        val  task  = App.App.dp.taskDao().getAll()
-        adapter.addTask(task)
-
+        binding.recyclerView.adapter = adapter
     }
-    private fun onLongClickListener(task: Task){
+
+
+    private fun onLongClick(task: Task) {
         val alert = AlertDialog.Builder(requireContext())
-       alert.setTitle("Delete?")
-       alert.setPositiveButton("Yes"){dialog,_->
-            App.App.dp.taskDao()?.delete(task)
-           dialog.dismiss()
+        alert.setTitle("Delete")
+        alert.setPositiveButton("Yes") { d, _ ->
+            App.App.dp.taskDao().delete(task)
             setData()
-
+            d.dismiss()
         }
-        alert.setNegativeButton("No"){dialog,_->
-            dialog.dismiss()
-
+        alert.setNegativeButton("No") { d, _ ->
+            d.dismiss()
         }
-       alert.create().show()
+        alert.create().show()
+
+
     }
 
     private fun setData() {
-     val task = App.App.dp.taskDao().getAll()
+        val task = App.App.dp.taskDao().getAll()
         adapter.addTask(task)
+
+
     }
-
-
-
 }
+
+
+

@@ -14,7 +14,8 @@ class TaskAdapter(private val onLongClick:(Task) ->Unit) : RecyclerView.Adapter<
 
     fun addTask(task: List<Task>) {
       data.clear()
-        notifyItemChanged(0)
+        data.addAll(task)
+      notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -43,8 +44,11 @@ class TaskAdapter(private val onLongClick:(Task) ->Unit) : RecyclerView.Adapter<
                 false
             }
             with(binding) {
-               title.text = task.title
+                title.text = task.title
                 description.text = task.description
+
+            }
+
 
                 }
             }
@@ -54,7 +58,7 @@ class TaskAdapter(private val onLongClick:(Task) ->Unit) : RecyclerView.Adapter<
 
         }
 
-    }
+
 
 
 

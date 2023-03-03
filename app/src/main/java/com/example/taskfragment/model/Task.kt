@@ -9,6 +9,4 @@ data class Task(
     var id: Int? = null,
     val title: String? = null,
     val description:String? =null
-
-
 ):java.io.Serializable

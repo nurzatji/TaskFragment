@@ -29,7 +29,6 @@ class TaskFragment : Fragment() {
                 description = binding.description.text.toString()
             )
             App.App.dp.taskDao().insert(task)
-
             findNavController().navigateUp()
         }
     }

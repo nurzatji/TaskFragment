@@ -1,4 +1,4 @@
-package com.example.taskfragment.data.local.model
+package com.example.taskfragment.model
 
 data class onBoard(
     val title:String? = null,
