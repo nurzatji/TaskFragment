@@ -18,6 +18,8 @@ import com.bumptech.glide.Glide
 import com.example.taskfragment.data.local.Pref
 import com.example.taskfragment.databinding.FragmentProfileBinding
 import com.example.taskfragment.ui.utils.loadImage
+import com.google.firebase.auth.FirebaseAuth
+import java.lang.System.exit
 
 
 class ProfileFragment : Fragment() {
@@ -49,6 +51,14 @@ private val KEY_FOR_RESULT = 10
        saveName()
         pref.getImage()?.let { binding.imgProfile.loadImage(it) }
         saveImage()
+       exitAccount()
+    }
+
+    private fun exitAccount() {
+        binding.btnExit.setOnClickListener{
+          FirebaseAuth.getInstance().signOut()
+            activity?.finish()
+        }
     }
 
     private fun saveImage(){

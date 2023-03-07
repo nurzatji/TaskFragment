@@ -50,7 +50,7 @@
         android:visibility="gone"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/get_start"
+        android:text="getString"
 app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/btn_Start"
         android:layout_width="match_parent"

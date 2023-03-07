@@ -3,11 +3,13 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title" />
     <string name="description" />
     <string name="save" />
     <string name="skip">skip</string>
-    <string name="get_start">Get Start</string>
+    <string name="exit">exit</string>
+    <string name="click">Click</string>
+
+
 </resources>

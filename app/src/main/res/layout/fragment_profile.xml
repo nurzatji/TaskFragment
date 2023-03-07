@@ -7,6 +7,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/btn_exit"
+        android:text="@string/exit"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_profile"
         android:layout_width="200dp"
@@ -25,8 +34,10 @@
         android:hint="Enter your name">
 
        <Button
+           android:text="@string/click"
            android:id="@id/et_text"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

@@ -11,11 +11,12 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            app:popUpTo="@+id/mobile_navigation"
-            app:popUpToInclusive="true"
-
             android:id="@+id/action_navigation_home_to_onBoardFragment"
-            app:destination="@id/onBoardFragment" />
+            app:destination="@id/onBoardFragment"
+
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true"/>
+
     </fragment>
 
     <fragment
@@ -56,4 +57,12 @@
             android:id="@+id/action_onBoardFragment_to_navigation_home"
             app:destination="@id/navigation_home" />
     </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.taskfragment.ui.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
+
+    <action android:id="@+id/actionToAuth"
+        app:destination="@+id/authFragment"/>
 </navigation>
