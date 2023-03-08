@@ -25,8 +25,8 @@ class TaskFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnSave.setOnClickListener {
             val task = Task(
-                title = binding.titil.text.toString(),
-                description = binding.description.text.toString()
+                title = binding.etTitil.text.toString(),
+                description = binding.etDescription.text.toString()
             )
             App.App.dp.taskDao().insert(task)
             findNavController().navigateUp()

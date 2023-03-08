@@ -10,6 +10,9 @@
     <string name="skip">skip</string>
     <string name="exit">exit</string>
     <string name="click">Click</string>
+    <string name="input">Заполните поле</string>
+    <string name="label" />
+    <string name="content" />
 
 
 </resources>
