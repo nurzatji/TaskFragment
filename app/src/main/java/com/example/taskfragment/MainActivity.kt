@@ -2,6 +2,7 @@ package com.example.taskfragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -14,6 +15,7 @@ import com.example.taskfragment.databinding.ActivityMainBinding
 import com.example.taskfragment.ui.auth.AuthFragmentDirections
 import com.example.taskfragment.ui.home.HomeFragmentDirections
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,6 +64,11 @@ class MainActivity : AppCompatActivity() {
 //            navView.isVisible = destination.id != R.id.taskFragment
         }
         navView.setupWithNavController(navController)
+
+        FirebaseMessaging.getInstance().token.addOnSuccessListener {
+            Log.d("ololo", "token:$it")
+
+        }
     }
 }
 

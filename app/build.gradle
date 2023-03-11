@@ -56,6 +56,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.4.1'
 
     implementation 'com.google.firebase:firebase-firestore:24.4.4'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
 
 
     testImplementation 'junit:junit:4.13.2'
@@ -83,6 +84,8 @@ dependencies {
 
     // To use Kotlin annotation processing tool (kapt)
     kapt "androidx.room:room-compiler:$room_version"
+
+
 }
 
 
